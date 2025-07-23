@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+background: url("/background.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Fredoka One', cursive;
+    text-align: center;
+}
