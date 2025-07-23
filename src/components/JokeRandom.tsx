@@ -7,7 +7,7 @@ function JokeRandom() {
         fetch(`${import.meta.env.VITE_API_URL}/blagues/random`)
             .then(response => response.json())
             .then(data => {
-                setJoke(data.joke);
+                setJoke(data.content);
             })
             .catch(error => {
                 console.error("Error fetching joke:", error);
