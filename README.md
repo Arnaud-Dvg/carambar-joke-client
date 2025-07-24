@@ -1,69 +1,53 @@
-# React + TypeScript + Vite
+# 🍭 Carambar Joke Client – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interface web React permettant d’afficher des blagues Carambar de façon aléatoire, en se connectant à une API externe développée en Express.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Objectifs
 
-## Expanding the ESLint configuration
+- Consommer une API REST externe (Carambar Joke Server)
+- Afficher une blague aléatoire dans une interface fun et responsive
+- Styliser l'application avec Tailwind CSS
+- Déployer le frontend sur GitHub Pages via Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Stack technique
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React** – Librairie JS pour construire l’interface utilisateur  
+- **Vite** – Outil de build rapide et léger  
+- **TypeScript** – Sécurisation du code via le typage statique  
+- **Tailwind CSS** – Framework utilitaire pour le style  
+- **React Router** – Pour la navigation (si applicable)  
+- **GH Pages** – Déploiement statique de l’application
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌍 Accès en ligne
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 🖥️ Site : [https://arnaud-dvg.github.io/carambar-joke-client/](https://arnaud-dvg.github.io/carambar-joke-client/)
+- 🔗 API utilisée : [https://carambar-joke-server.onrender.com](https://carambar-joke-server.onrender.com)
+- 📘 Documentation API : [https://carambar-joke-server.onrender.com/api-docs/](https://carambar-joke-server.onrender.com/api-docs/)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🖥️ Lancer le projet en local
+
+1. Cloner le dépôt  
+   `git clone https://github.com/arnaud-dvg/carambar-joke-client.git`  
+   `cd carambar-joke-client`
+
+2. Installer les dépendances  
+   `npm install`
+
+3. Lancer le serveur de dev  
+   `npm run dev`
+
+> L’application sera disponible par défaut sur `http://localhost:5173`
+
+---
+
+🙋‍♂️ Auteur
+Projet réalisé par Arnaud DVG
+🔗 https://github.com/arnaud-dvg
