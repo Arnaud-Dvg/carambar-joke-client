@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function JokeRandom() {
-    const [joke, setJoke] = useState("Test");
+    const [joke, setJoke] = useState("Clique sur les Carambar pour une blague !");
 
     const Random = () => {
         fetch(`${import.meta.env.VITE_API_URL}/blagues/random`)
@@ -17,10 +17,9 @@ function JokeRandom() {
 
     return (
         <div className="h-150 flex items-center justify-center">
-            <div className="bg-[#FD7138] text-white p-6 rounded-lg shadow-lg text-center">
-                <h2 className="text-2xl font-bold">Rigolons !</h2>
+            <div className="bg-[#FD7138] text-white p-6 rounded-lg shadow-lg text-center border border-black">
                 <p className="my-4">{joke}</p>
-                <button type="button" onClick={Random} className="bg-[#F9C43A] text-white p-6 rounded-lg shadow-lg text-center">Clique ici !</button>
+                <button type="button" onClick={Random} className="p-2 text-center"><img src="./carambar.png" alt="carambar" /></button>
             </div>
         </div>
     );
